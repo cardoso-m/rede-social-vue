@@ -28,10 +28,6 @@
             </cardMenuVue>
           </gridVue>
 
-          <button>
-            Curtir
-          </button>
-
           <gridVue tamanho="8">
             <router-view />
           </gridVue>
