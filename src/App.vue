@@ -1,7 +1,7 @@
 <template>
   <span>
     <header>
-      <navbar logo='Social' url='#' cor='grey darken-3' />
+      <navbar logo='Social' url='#' cor='green accent-4' />
     </header>
 
     <main>
@@ -38,7 +38,7 @@
     </main>
 
 
-    <footerVue cor="grey darken-3" logo="Social" descricao="Teste de descrição" ano="2024">
+    <footerVue cor="green accent-4" logo="Social" descricao="Teste de descrição" ano="2024">
 
       <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
       <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
