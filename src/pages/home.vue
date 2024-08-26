@@ -1,6 +1,7 @@
 <template>
 
-  <span>
+
+  <siteTemplate>
 
     <feedConteudoVue />
 
@@ -13,18 +14,16 @@
 
     </cardConteudoVue>
 
-  </span>
-
-
-
-
+    </siteTemplate>
 </template>
 
 <script>
+import siteTemplate from '../templates/siteTemplate.vue';
 import cardConteudoVue from '../components/social/cardConteudoVue.vue';
 import cardDetalheVue from '../components/social/cardDetalheVue.vue';
 import gridVue from '../components/layouts/gridVue.vue';
 import feedConteudoVue from '../components/social/feedConteudoVue.vue';
+
 
 export default {
   name: 'home',
@@ -34,6 +33,7 @@ export default {
     }
   },
   components: {
+    siteTemplate,
     cardConteudoVue,
     cardDetalheVue,
     gridVue,
