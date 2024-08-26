@@ -2,16 +2,7 @@
 
   <span>
 
-    <div class="row">
-      <gridVue class="input-field" tamanho="12">
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1">O que está acontecendo?</label>
-      </gridVue>
-
-      <p>
-        <gridVue class="btn waves-effect waves-light" tamanho="2 offset-s10" >Publicar</gridVue>
-      </p>
-    </div>
+    <feedConteudoVue />
 
 
     <cardConteudoVue img_perfil="https://materializecss.com/images/yuna.jpg" nome="Matheus Cardoso"
@@ -33,6 +24,7 @@
 import cardConteudoVue from '../components/social/cardConteudoVue.vue';
 import cardDetalheVue from '../components/social/cardDetalheVue.vue';
 import gridVue from '../components/layouts/gridVue.vue';
+import feedConteudoVue from '../components/social/feedConteudoVue.vue';
 
 export default {
   name: 'home',
@@ -44,7 +36,8 @@ export default {
   components: {
     cardConteudoVue,
     cardDetalheVue,
-    gridVue
+    gridVue,
+    feedConteudoVue
   }
 }
 </script>
