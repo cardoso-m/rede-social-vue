@@ -1,38 +1,44 @@
 <template>
 
-  <span>
 
-    <div class="row">
-      <gridVue class="input-field" tamanho="12">
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1">O que está acontecendo?</label>
-      </gridVue>
+  <siteTemplate>
 
-      <p>
-        <gridVue class="btn waves-effect waves-light" tamanho="2 offset-s10" >Publicar</gridVue>
-      </p>
-    </div>
+    <span slot="menuesquerdo">
+      <div class="row valign-wrapper">
+        <gridVue tamanho="4">
+          <img src="https://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img">
+        </gridVue>
+        <gridVue tamanho="8">
+          <span class="black-text">
+            <h5>Matheus Cardoso</h5>
+            Add the "circle" class to it to make it appear circular.
+          </span>
+        </gridVue>
+      </div>
+    </span>
 
+    <span slot="principal">
+      <cardConteudoVue img_perfil="https://materializecss.com/images/yuna.jpg" nome="Matheus Cardoso"
+        data="21/08/2024 20:30">
 
-    <cardConteudoVue img_perfil="https://materializecss.com/images/yuna.jpg" nome="Matheus Cardoso"
-      data="21/08/2024 20:30">
-
-      <cardDetalheVue imagem="https://materializecss.com/images/sample-1.jpg" titulo="" descricao="I am a very simple card. I am good at containing small bits of information.
+        <cardDetalheVue imagem="https://materializecss.com/images/sample-1.jpg" titulo="" descricao="I am a very simple card. I am good at containing small bits of information.
       I am convenient because I require little markup to use effectively." />
 
-    </cardConteudoVue>
+      </cardConteudoVue>
+    </span>
 
-  </span>
+    <feedConteudoVue />
 
-
-
-
+  </siteTemplate>
 </template>
 
 <script>
+import siteTemplate from '../templates/siteTemplate.vue';
 import cardConteudoVue from '../components/social/cardConteudoVue.vue';
 import cardDetalheVue from '../components/social/cardDetalheVue.vue';
 import gridVue from '../components/layouts/gridVue.vue';
+import feedConteudoVue from '../components/social/feedConteudoVue.vue';
+
 
 export default {
   name: 'home',
@@ -42,9 +48,11 @@ export default {
     }
   },
   components: {
+    siteTemplate,
     cardConteudoVue,
     cardDetalheVue,
-    gridVue
+    gridVue,
+    feedConteudoVue
   }
 }
 </script>
