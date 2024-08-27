@@ -1,7 +1,10 @@
 <template>
     <span>
         <header>
-            <navbar logo='Social' url='#' cor='green accent-4' />
+            <navbar logo='Social' url='#/' cor='green accent-4'>
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/login">Entrar</a></li>
+            </navbar>
         </header>
 
         <main>
@@ -10,27 +13,14 @@
                 <div class="row">
                     <gridVue tamanho="4">
                         <cardMenuVue>
-                            <div class="row valign-wrapper">
-                                <gridVue tamanho="4">
-                                    <img src="https://materializecss.com/images/yuna.jpg" alt=""
-                                        class="circle responsive-img">
-                                </gridVue>
-                                <gridVue tamanho="8">
-                                    <span class="black-text">
-                                        <h5>Matheus Cardoso</h5>
-                                        Add the "circle" class to it to make it appear circular.
-                                    </span>
-                                </gridVue>
-                            </div>
+                            <slot name="menuesquerdo" />
 
                         </cardMenuVue>
-                        <cardMenuVue>
-                            teste
-                        </cardMenuVue>
+
                     </gridVue>
 
                     <gridVue tamanho="8">
-                        <slot />
+                        <slot name="principal" />
                     </gridVue>
                 </div>
 

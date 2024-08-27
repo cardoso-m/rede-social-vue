@@ -1,7 +1,10 @@
 <template>
     <span>
         <header>
-            <navbar logo='Social' url='#' cor='green accent-4' />
+            <navbar logo='Social' url='#/' cor='green accent-4'>
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/login">Entrar</a></li>
+            </navbar>
         </header>
 
         <main>
@@ -14,7 +17,7 @@
                         </cardMenuVue>
                     </gridVue>
                     <gridVue tamanho="6">
-                            <slot name="principal" />
+                        <slot name="principal" />
                     </gridVue>
                 </div>
 
