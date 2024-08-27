@@ -1,20 +1,23 @@
 <template>
 
-  <span>
+  <loginTemplate>
 
-    <feedConteudoVue />
 
-    <h1>lalala</h1>
+    <span slot="menuesquerdo">
+      <img src="https://fia.com.br/wp-content/uploads/2019/07/redes-sociais-numeros-no-mundo.jpg" class="responsive-img">
+    </span>
 
-    <cardConteudoVue img_perfil="https://materializecss.com/images/yuna.jpg" nome="Matheus Cardoso"
-      data="21/08/2024 20:30">
 
-      <cardDetalheVue imagem="https://materializecss.com/images/sample-1.jpg" titulo="" descricao="I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively." />
+    <span slot="principal">
+      <h2>Login</h2>
 
-    </cardConteudoVue>
+      <input type="text" placeholder="E-mail">
+      <input type="password" placeholder="Senha">
+      <button class="btn">Entrar</button>
+    </span>
 
-  </span>
+
+  </loginTemplate>
 
 
 
@@ -26,6 +29,7 @@ import cardConteudoVue from '../components/social/cardConteudoVue.vue';
 import cardDetalheVue from '../components/social/cardDetalheVue.vue';
 import gridVue from '../components/layouts/gridVue.vue';
 import feedConteudoVue from '../components/social/feedConteudoVue.vue';
+import loginTemplate from '../templates/loginTemplate.vue';
 
 export default {
   name: 'login',
@@ -35,6 +39,7 @@ export default {
     }
   },
   components: {
+    loginTemplate,
     cardConteudoVue,
     cardDetalheVue,
     gridVue,
