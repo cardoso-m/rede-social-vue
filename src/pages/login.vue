@@ -4,16 +4,32 @@
 
 
     <span slot="menuesquerdo">
-      <img src="https://fia.com.br/wp-content/uploads/2019/07/redes-sociais-numeros-no-mundo.jpg" class="responsive-img">
+      <img src="https://fia.com.br/wp-content/uploads/2019/07/redes-sociais-numeros-no-mundo.jpg"
+        class="responsive-img">
     </span>
 
 
     <span slot="principal">
-      <h2>Login</h2>
 
-      <input type="text" placeholder="E-mail">
-      <input type="password" placeholder="Senha">
-      <button class="btn">Entrar</button>
+      <span v-if="!cadastro">
+        <h2>Login</h2>
+
+        <input type="text" placeholder="E-mail">
+        <input type="password" placeholder="Senha">
+        <button class="btn">Entrar</button>
+        <button class="btn blue" v-on:click="cadastro = !cadastro">Cadastre-se</button>
+      </span>
+      <span v-if="cadastro">
+        <h2>Cadastrar</h2>
+
+        <input type="text" placeholder="E-mail">
+        <input type="text" placeholder="E-mail">
+        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="Confirmar senha">
+        <button class="btn">Enviar</button>
+        <button class="btn blue" v-on:click="cadastro = !cadastro">Já tenho conta</button>
+      </span>
+
     </span>
 
 
@@ -25,25 +41,17 @@
 </template>
 
 <script>
-import cardConteudoVue from '../components/social/cardConteudoVue.vue';
-import cardDetalheVue from '../components/social/cardDetalheVue.vue';
-import gridVue from '../components/layouts/gridVue.vue';
-import feedConteudoVue from '../components/social/feedConteudoVue.vue';
 import loginTemplate from '../templates/loginTemplate.vue';
 
 export default {
   name: 'login',
   data() {
     return {
-
+      cadastro: true
     }
   },
   components: {
     loginTemplate,
-    cardConteudoVue,
-    cardDetalheVue,
-    gridVue,
-    feedConteudoVue
   }
 }
 </script>
